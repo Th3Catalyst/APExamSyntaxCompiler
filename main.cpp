@@ -5,11 +5,19 @@
 
 int main()
 {
+    unsigned short int lineNumber = 1;
     std::string fileContents;
     std::ifstream in("test.apexam");     
 
     while (getline(in, fileContents)) {
-        std::cout << fileContents << "\n";
+        if(lineNumber < 10)
+        {
+            std::cout << lineNumber << "  " << fileContents << "\n";
+        } else {
+            std::cout << lineNumber << " " << fileContents << "\n";
+        }
+
+        lineNumber++;
     }
 
     while(!in.eof())
