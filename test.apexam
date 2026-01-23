@@ -1,0 +1,81 @@
+# this is a comment
+
+# testing input, display, and defining variables
+greeting <- "Jello, world!"
+
+DISPLAY(greeting)
+DISPLAY("What is your name? ")
+name <- INPUT()
+
+DISPLAY("Greetings, ", name)
+
+# testing math functions
+num1 <- 4.3
+num2 <- 2.1
+
+DISPLAY(10 + 10)
+DISPLAY(10 - 15)
+DISPLAY(num1 / 2.1)
+DISPLAY(num2 * 4.3)
+
+DISPLAY(10 MOD 3)
+
+# testing random numbers and control flow
+rand1 <- RANDOM(-10, 10)
+rand2 <- RANDOM(-10, 10)
+
+IF(rand1 > rand2)
+{
+  DISPLAY("rand1 is bigger than rand2")
+}
+ELSE
+{
+  DISPLAY("rand2 is bigger than rand1")
+}
+
+IF(NOT rand1 = rand2)
+{
+  DISPLAY("rand1 is not equal to rand2")
+}
+ELSE
+{
+  DISPLAY("rand1 is equal to rand2")
+}
+
+IF(rand1 >= 0 OR rand2 >= 0)
+{
+  DISPLAY("rand1 or rand2 is greater than 0")
+}
+
+# testing lists, repeat until, and procedures
+list1 <- []
+INSERT(list1, 1, 10)
+value1 <- list1[1]
+
+PROCEDURE increment(number)
+{
+  RETURN(number + 1)
+}
+
+i <- 2
+REPEAT UNTIL(i <= 10)
+{
+  APPEND(list1, i, value1 * i)
+  i <- increment(i)
+}
+
+DISPLAY(list1)
+
+FOR EACH item IN list1
+{
+  IF(item = 40)
+  {
+    REMOVE(list1, i)
+  }
+  ELSE
+  {
+    DISPLAY(item)
+  }
+}
+
+DISPLAY(LENGTH(list1))
