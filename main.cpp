@@ -1,19 +1,18 @@
-#include <iostream>
-#include <fstream>
-#include <istream>
-using namespace std;
+#include "assets.h"
+
 
 int main() {
 
-  
-    ifstream in("main.apexam");     
+    std::map<std::string, std::any> variables;
 
-    while(!in.eof())
+    std::ifstream in("main.apexam");
+    std::string text;     
+
+    while(std::getline (in, text))
     {
-    string text;
-    istream getline(in, text);
-
+       std::cout << text;
     }
 
+    in.close();
     return 0;
 } 
